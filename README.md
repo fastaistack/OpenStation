@@ -2,7 +2,7 @@
 
 ## :tada: 最近更新
 
-* :fire: \[2025-04-30] **OpenStation V0.6.4发布**
+* :fire: \[2025-05-30] **OpenStation V0.6.4发布**
 
 ***
 
