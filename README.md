@@ -132,7 +132,11 @@ tar -xvzf openstation-pkg-v0.6.4.tar.gz && cd openstation-pkg-v0.6.4/deploy && b
 * 🔗[ **\[LLM 客户端接入 OpenStation 手册\]**](./docs/OpenStation对接CherryStudio、Chatbox配置指南.md) - 指导如何将ChatBox、CherryStudio等 LLM 客户端接入 OpenStation。
 
 ***
+## 用户交流
 
+欢迎扫码加入项目讨论群，反馈您的使用体验和想法
+
+![](docs/images/readme/0526.png)
 ## 许可
 
 本项目基于 **Apache License 2.0** 进行分发和使用。
