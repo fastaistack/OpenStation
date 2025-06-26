@@ -67,7 +67,7 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 #其中，--version 0.6.4表示本次安装OpenStation平台的版本
 bash openstation-install-online.sh  --version 0.6.4
 ```
-您也可以通过链接直接下载[在线安装包](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)，上传到服务器上执行以下安装命令：
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.4.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)，上传到服务器上执行以下安装命令：
 ```shell
 tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
 cd openstation-pkg-online-v0.6.4/deploy

@@ -13,7 +13,7 @@
 ```bash
 curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh
 ```
-您也可以通过链接直接下载[在线安装包](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.4.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)
 
 * 离线安装
 
@@ -74,7 +74,7 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 cd /home
 bash openstation-install-online.sh --version 0.6.4
 ```
-如果您已经下载的在线安装包openstation-pkg-online-v0.6.4.tar.gz并上传到服务器上，可以执行以下安装命令：
+如果您已经下载了在线安装包openstation-pkg-online-v0.6.4.tar.gz并上传到服务器上，可以执行以下安装命令：
 ```shell
 tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
 cd openstation-pkg-online-v0.6.4/deploy
