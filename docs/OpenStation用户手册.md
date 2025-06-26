@@ -13,12 +13,7 @@
 ```bash
 curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh
 ```
-您也可以通过链接直接下载[在线安装包](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)，上传到服务器上执行以下安装命令：
-```shell
-tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
-cd openstation-pkg-online-v0.6.4/deploy
-bash install.sh true
-```
+您也可以通过链接直接下载[在线安装包](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)
 
 * 离线安装
 
@@ -79,7 +74,12 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 cd /home
 bash openstation-install-online.sh --version 0.6.4
 ```
-
+如果您已经下载的在线安装包openstation-pkg-online-v0.6.4.tar.gz并上传到服务器上，可以执行以下安装命令：
+```shell
+tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
+cd openstation-pkg-online-v0.6.4/deploy
+bash install.sh true
+```
 确保 **部署节点联网正常**，运行安装脚本后，根据提示信息按 **回车键** 继续安装。系统将自动下载安装文件，速度取决于网络状况。下面为部分安装日志展示部分，请耐心等待并检查日志是否有异常。
 
 ```prolog
