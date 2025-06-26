@@ -67,10 +67,11 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 #其中，--version 0.6.4表示本次安装OpenStation平台的版本
 bash openstation-install-online.sh  --version 0.6.4
 ```
-您也可以通过链接直接下载[在线安装脚本](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh)，上传到服务器上执行以下安装命令：
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.4.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)，上传到服务器上执行以下安装命令：
 ```shell
-#其中，--version 0.6.4表示本次安装OpenStation平台的版本
-bash openstation-install-online.sh  --version 0.6.4
+tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
+cd openstation-pkg-online-v0.6.4/deploy
+bash install.sh true
 ```
 
 执行后，根据屏幕提示按 **回车键** 继续安装。安装程序将自动下载所需组件，具体 **安装时间取决于网络状况**。
@@ -127,6 +128,9 @@ tar -xvzf openstation-pkg-v0.6.4.tar.gz && cd openstation-pkg-v0.6.4/deploy && b
 如果部署正确，您将看到 OpenStation 的 **登录页面** 或 **管理界面**。
 
 ![](./docs/images/readme/image.png)
+
+登录用户名为admin，密码您可以参考[ **\[用户手册\]**](./docs/OpenStation用户手册.md) 的1.4章节。
+
 
 **在使用过程中，您可参考以下文档获取更多帮助：**
 
