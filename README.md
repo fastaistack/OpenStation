@@ -2,7 +2,7 @@
 
 ## :tada: 最近更新
 
-* :fire: \[2025-05-30] **OpenStation V0.6.4发布**
+* :fire: \[2025-07-02] **OpenStation V0.6.5发布**
 
 ***
 
@@ -64,13 +64,13 @@ OpenStation，让大模型部署从未如此简单！
 
 ```shell
 curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh
-#其中，--version 0.6.4表示本次安装OpenStation平台的版本
-bash openstation-install-online.sh  --version 0.6.4
+#其中，--version 0.6.5表示本次安装OpenStation平台的版本
+bash openstation-install-online.sh  --version 0.6.5
 ```
-您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.4.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)，上传到服务器上执行以下安装命令：
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.5.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.5.tar.gz)，上传到服务器上执行以下安装命令：
 ```shell
-tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
-cd openstation-pkg-online-v0.6.4/deploy
+tar -xvzf openstation-pkg-online-v0.6.5.tar.gz
+cd openstation-pkg-online-v0.6.5/deploy
 bash install.sh true
 ```
 
@@ -86,14 +86,14 @@ bash install.sh true
 
 | **包类型**       | **包下载地址**                                                                                       | **内容**        | **大小** |
 | ------------- | ----------------------------------------------------------------------------------------------- | ------------- | ------ |
-| **离线安装包**     | [点击下载](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.4.tar.gz) | 平台功能组件+推理引擎镜像 | 10.1GB |
-| **安装包SHA256** | [点击下载](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.4)                     | 安装包SHA256校验文件 | 96B    |
+| **离线安装包**     | [点击下载](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.5.tar.gz) | 平台功能组件+推理引擎镜像 | 10.1GB |
+| **安装包SHA256** | [点击下载](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.5)                     | 安装包SHA256校验文件 | 96B    |
 
 您可以使用 **浏览器下载**，或通过 **命令行下载**：
 
 ```shell
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.4.tar.gz
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.4
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.5.tar.gz
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.5
 ```
 
 下载完成后，请 **上传安装包至待部署节点**，并进行 **完整性校验。**
@@ -104,9 +104,9 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0
 
 ```shell
 #校验包的完整性
-sha256sum -c SHA256SUM-0.6.4
+sha256sum -c SHA256SUM-0.6.5
 #解压安装包，执行安装过程
-tar -xvzf openstation-pkg-v0.6.4.tar.gz && cd openstation-pkg-v0.6.4/deploy && bash install.sh
+tar -xvzf openstation-pkg-v0.6.5.tar.gz && cd openstation-pkg-v0.6.5/deploy && bash install.sh
 ```
 
 > **安装过程说明**：
