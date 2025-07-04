@@ -2,7 +2,7 @@
 
 ## :tada: 最近更新
 
-* :fire: \[2025-07-04] **OpenStation V0.6.5发布，支持模型文件并发下载和队列管理！**
+* :fire: \[2025-07-04] **OpenStation V0.6.5发布，支持模型下载队列管理！**
 * :fire: \[2025-05-30] **OpenStation V0.6.4发布，支持Deepseek、通义千问Qwen3系列全新模型！**
 * :fire: \[2025-03-20] **OpenStation V0.6.3发布！**
 
