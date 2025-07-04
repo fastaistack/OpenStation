@@ -13,15 +13,15 @@
 ```bash
 curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh
 ```
-您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.4.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.4.tar.gz)
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.5.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.5.tar.gz)
 
 * 离线安装
 
 对于 **离线安装**，需要先下载 **安装包** 和 **SHA256SUM 文件**（用于校验文件完整性）。Linux 下的获取方式如下：
 
 ```bash
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.4
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.4.tar.gz
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.5
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.5.tar.gz
 ```
 
 ## 1.2 操作系统部署
@@ -68,16 +68,16 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 
 **Step 1: 文件上传并执行安装**
 
-首先，将 **安装部署脚本** (`openstation-install-online.sh`) 上传至 **部署节点** 的 `/home` 目录（或其他指定目录），然后执行以下命令安装（其中，--version 0.6.4 表示安装OpenStation平台的版本)：
+首先，将 **安装部署脚本** (`openstation-install-online.sh`) 上传至 **部署节点** 的 `/home` 目录（或其他指定目录），然后执行以下命令安装（其中，--version 0.6.5 表示安装OpenStation平台的版本)：
 
 ```bash
 cd /home
-bash openstation-install-online.sh --version 0.6.4
+bash openstation-install-online.sh --version 0.6.5
 ```
-如果您已经下载了在线安装包openstation-pkg-online-v0.6.4.tar.gz并上传到服务器上，可以执行以下安装命令：
+如果您已经下载了在线安装包openstation-pkg-online-v0.6.5.tar.gz并上传到服务器上，可以执行以下安装命令：
 ```shell
-tar -xvzf openstation-pkg-online-v0.6.4.tar.gz
-cd openstation-pkg-online-v0.6.4/deploy
+tar -xvzf openstation-pkg-online-v0.6.5.tar.gz
+cd openstation-pkg-online-v0.6.5/deploy
 bash install.sh true
 ```
 确保 **部署节点联网正常**，运行安装脚本后，根据提示信息按 **回车键** 继续安装。系统将自动下载安装文件，速度取决于网络状况。下面为部分安装日志展示部分，请耐心等待并检查日志是否有异常。
@@ -100,7 +100,7 @@ Checking Internet Connectivity:
 ============================================================
 
 Start downloading the OpenStation installation package.
-Downloading the file: openstation-pkg-v0.6.4.tar.gz...
+Downloading the file: openstation-pkg-v0.6.5.tar.gz...
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    96  100    96    0     0   1092      0 --:--:-- --:--:-- --:--:--  1090
@@ -119,7 +119,7 @@ Downloading the file: openstation-pkg-v0.6.4.tar.gz...
 
 ```prolog
 ==================================================
-     Installing OpenStation (Version 0.6.4)... 
+     Installing OpenStation (Version 0.6.5)... 
 ==================================================
 [INFO] Execution Time: 2025-03-13 20:24:56 
 [INFO] Log File: /var/log/install/install.txt.2025-03-13_20-24-56 
@@ -156,17 +156,17 @@ https://192.168.0.12:32206
 
 **Step 1: 校验安装包是否完整**
 
-将下载的安装包 openstation-pkg-v0.6.4.tar.gz 和SHA256SUM文件一起上传至部署节点的 `/home` 目录（或其他目录），开始校验安装包是否完整，通过对比文件生成的sha256sum值和SHA256SUM文件中的值是否一致来判断安装包是否完整：
+将下载的安装包 openstation-pkg-v0.6.5.tar.gz 和SHA256SUM文件一起上传至部署节点的 `/home` 目录（或其他目录），开始校验安装包是否完整，通过对比文件生成的sha256sum值和SHA256SUM文件中的值是否一致来判断安装包是否完整：
 
-将 **下载的安装包** (`openstation-pkg-v0.6.4.tar.gz`) 和 `SHA256SUM` 文件 **上传至部署节点的 `/home` 目录**（或其他指定目录）。然后，通过 **SHA256 校验** 确保安装包未损坏：
+将 **下载的安装包** (`openstation-pkg-v0.6.5.tar.gz`) 和 `SHA256SUM` 文件 **上传至部署节点的 `/home` 目录**（或其他指定目录）。然后，通过 **SHA256 校验** 确保安装包未损坏：
 
 ```bash
 cd /home/
 # 生成文件sha256sum值
-sha256sum openstation-pkg-v0.6.4.tar.gz
+sha256sum openstation-pkg-v0.6.5.tar.gz
 
 # 查看SHA256SUM文件中的值
-cat SHA256SUM-0.6.4
+cat SHA256SUM-0.6.5
 
 ```
 
@@ -178,15 +178,15 @@ cat SHA256SUM-0.6.4
 
 ```bash
 cd /home/
-tar -xvzf openstation-pkg-v0.6.4.tar.gz
+tar -xvzf openstation-pkg-v0.6.5.tar.gz
 ```
 
 **Step 3: 运行部署脚本**
 
-进入解压后的 openstation-pkg-v0.6.4/deploy 目录，执行 `install.sh` 部署脚本，并按照提示输入相关信息：
+进入解压后的 openstation-pkg-v0.6.5/deploy 目录，执行 `install.sh` 部署脚本，并按照提示输入相关信息：
 
 ```bash
-cd openstation-pkg-v0.6.4/deploy
+cd openstation-pkg-v0.6.5/deploy
 bash install.sh
 ```
 
@@ -200,7 +200,7 @@ bash install.sh
 
 ```prolog
 ==================================================
-     Installing OpenStation (Version 0.6.4)... 
+     Installing OpenStation (Version 0.6.5)... 
 ==================================================
 [INFO] Execution Time: 2025-03-13 20:24:56 
 [INFO] Log File: /var/log/install/install.txt.2025-03-13_20-24-56 
@@ -507,19 +507,25 @@ https://192.168.0.12:32206
 
 ## 4.2 **下载管理**
 
+* **多个下载任务排队**
+
+  * 支持用户 **提交多个模型下载任务，按照提交顺序展示在下载列表中**，同时只能有一个模型在下载。
+  
+  * 当前下载的模型完成，**自动触发下一个排队的模型任务下载**。
+
 * **暂停与继续下载**
 
-  * 用户 **一次仅能下载一个模型**，可随时 **暂停或继续下载**。
-
-  * 暂停后，当前进度将 **保留**，日志信息仍可查看。
-
-  * 点击 **"开始"** 按钮，即可 **继续下载**。
+  * 用户可随时在下载列表中 **暂停或继续下载**，暂停后自动触发下一个排队的模型任务下载。
+  
+  * 当前下载的模型暂停后，进度将 **保留**，并显示**暂停下载**，点击 **"开始"** 按钮，放入队列，并插队至正在下载的模型后面，显示**排队中**。
+  
+  * 存在多个暂停任务时，后开始的模型下载任务将插队至排队队列的最前面。
 
 ![](images/user_guide/image-13.png)
 
 * **取消下载**
 
-  * 取消后，**下载任务将被终止**，**进度与日志将清空**。
+  * 取消后，**下载任务将被终止**，**进度与日志将清空**，取消后自动触发下一个排队的模型任务下载。
 
   * 若下载失败，用户可重新下载，系统支持 **断点续传**，无需重新开始。
 
