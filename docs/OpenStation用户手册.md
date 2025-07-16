@@ -819,8 +819,29 @@ https://192.168.0.12:32206
 
 ![](images/user_guide/image-25.png)
 
-#
 
+
+
+# 9. Agent管理
+
+## 9.1 Agent创建
+登录平台后，点击左侧菜单栏*Agent管理*，点击右上方的*部署Agent*按钮。填写表单，如下图所示：
+![](images/user_guide/image-agent-1.png)
+其中：
+*名称*：Agent的名字，可以根据需要取值，支持中英文等字符
+*选择模型*：选择当前平台已经部署的模型服务。如果没有已部署的模型，则需要在模型服务部署一个模型，请选择支持工具调用的模型，如千问3系列及Deepseek满血模型
+*选择工具*：选择在MCP工具中已经部署的工具，可以支持选择多个工具，以让Agent提供多种功能
+*描述*：Agent的描述信息，支持中英文等字符
+点击*部署*，则当前Agent会在本平台部署。
+
+## 9.2 Agent使用
+Agent部署后，在*Agent管理*页面能看到当前平台已经部署的所有Agent服务。如下图所示：
+![](images/user_guide/image-agent-2.png)
+
+以agent-demo举例，页面显示了使用Agent的Model ID、服务地址，您可以通过这个信息以及从用户管理获取到的API-KEY，配置到到LLM对话客户端，进行使用。以ChatBox为例，配置如下：
+![](images/user_guide/image-agent-3.png)
+配置完成后，可进行对话，询问MCP工具支持的相关问题。
+![](images/user_guide/image-agent-4.png)
 
 
 #
