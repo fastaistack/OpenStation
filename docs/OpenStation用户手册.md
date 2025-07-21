@@ -13,15 +13,15 @@
 ```bash
 curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-install-online.sh
 ```
-您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.5.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.5.tar.gz)
+您也可以通过链接直接下载[在线安装包openstation-pkg-online-v0.6.6.tar.gz](https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-online-v0.6.6.tar.gz)
 
 * 离线安装
 
 对于 **离线安装**，需要先下载 **安装包** 和 **SHA256SUM 文件**（用于校验文件完整性）。Linux 下的获取方式如下：
 
 ```bash
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.5
-curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.5.tar.gz
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/SHA256SUM-0.6.6
+curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation-pkg-v0.6.6.tar.gz
 ```
 
 ## 1.2 操作系统部署
@@ -68,16 +68,16 @@ curl -O  https://fastaistack.oss-cn-beijing.aliyuncs.com/openstation/openstation
 
 **Step 1: 文件上传并执行安装**
 
-首先，将 **安装部署脚本** (`openstation-install-online.sh`) 上传至 **部署节点** 的 `/home` 目录（或其他指定目录），然后执行以下命令安装（其中，--version 0.6.5 表示安装OpenStation平台的版本)：
+首先，将 **安装部署脚本** (`openstation-install-online.sh`) 上传至 **部署节点** 的 `/home` 目录（或其他指定目录），然后执行以下命令安装（其中，--version 0.6.6 表示安装OpenStation平台的版本)：
 
 ```bash
 cd /home
-bash openstation-install-online.sh --version 0.6.5
+bash openstation-install-online.sh --version 0.6.6
 ```
-如果您已经下载了在线安装包openstation-pkg-online-v0.6.5.tar.gz并上传到服务器上，可以执行以下安装命令：
+如果您已经下载了在线安装包openstation-pkg-online-v0.6.6.tar.gz并上传到服务器上，可以执行以下安装命令：
 ```shell
-tar -xvzf openstation-pkg-online-v0.6.5.tar.gz
-cd openstation-pkg-online-v0.6.5/deploy
+tar -xvzf openstation-pkg-online-v0.6.6.tar.gz
+cd openstation-pkg-online-v0.6.6/deploy
 bash install.sh true
 ```
 确保 **部署节点联网正常**，运行安装脚本后，根据提示信息按 **回车键** 继续安装。系统将自动下载安装文件，速度取决于网络状况。下面为部分安装日志展示部分，请耐心等待并检查日志是否有异常。
@@ -100,7 +100,7 @@ Checking Internet Connectivity:
 ============================================================
 
 Start downloading the OpenStation installation package.
-Downloading the file: openstation-pkg-v0.6.5.tar.gz...
+Downloading the file: openstation-pkg-v0.6.6.tar.gz...
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100    96  100    96    0     0   1092      0 --:--:-- --:--:-- --:--:--  1090
@@ -119,7 +119,7 @@ Downloading the file: openstation-pkg-v0.6.5.tar.gz...
 
 ```prolog
 ==================================================
-     Installing OpenStation (Version 0.6.5)... 
+     Installing OpenStation (Version 0.6.6)... 
 ==================================================
 [INFO] Execution Time: 2025-03-13 20:24:56 
 [INFO] Log File: /var/log/install/install.txt.2025-03-13_20-24-56 
@@ -156,17 +156,17 @@ https://192.168.0.12:32206
 
 **Step 1: 校验安装包是否完整**
 
-将下载的安装包 openstation-pkg-v0.6.5.tar.gz 和SHA256SUM文件一起上传至部署节点的 `/home` 目录（或其他目录），开始校验安装包是否完整，通过对比文件生成的sha256sum值和SHA256SUM文件中的值是否一致来判断安装包是否完整：
+将下载的安装包 openstation-pkg-v0.6.6.tar.gz 和SHA256SUM文件一起上传至部署节点的 `/home` 目录（或其他目录），开始校验安装包是否完整，通过对比文件生成的sha256sum值和SHA256SUM文件中的值是否一致来判断安装包是否完整：
 
-将 **下载的安装包** (`openstation-pkg-v0.6.5.tar.gz`) 和 `SHA256SUM` 文件 **上传至部署节点的 `/home` 目录**（或其他指定目录）。然后，通过 **SHA256 校验** 确保安装包未损坏：
+将 **下载的安装包** (`openstation-pkg-v0.6.6.tar.gz`) 和 `SHA256SUM` 文件 **上传至部署节点的 `/home` 目录**（或其他指定目录）。然后，通过 **SHA256 校验** 确保安装包未损坏：
 
 ```bash
 cd /home/
 # 生成文件sha256sum值
-sha256sum openstation-pkg-v0.6.5.tar.gz
+sha256sum openstation-pkg-v0.6.6.tar.gz
 
 # 查看SHA256SUM文件中的值
-cat SHA256SUM-0.6.5
+cat SHA256SUM-0.6.6
 
 ```
 
@@ -178,15 +178,15 @@ cat SHA256SUM-0.6.5
 
 ```bash
 cd /home/
-tar -xvzf openstation-pkg-v0.6.5.tar.gz
+tar -xvzf openstation-pkg-v0.6.6.tar.gz
 ```
 
 **Step 3: 运行部署脚本**
 
-进入解压后的 openstation-pkg-v0.6.5/deploy 目录，执行 `install.sh` 部署脚本，并按照提示输入相关信息：
+进入解压后的 openstation-pkg-v0.6.6/deploy 目录，执行 `install.sh` 部署脚本，并按照提示输入相关信息：
 
 ```bash
-cd openstation-pkg-v0.6.5/deploy
+cd openstation-pkg-v0.6.6/deploy
 bash install.sh
 ```
 
@@ -200,7 +200,7 @@ bash install.sh
 
 ```prolog
 ==================================================
-     Installing OpenStation (Version 0.6.5)... 
+     Installing OpenStation (Version 0.6.6)... 
 ==================================================
 [INFO] Execution Time: 2025-03-13 20:24:56 
 [INFO] Log File: /var/log/install/install.txt.2025-03-13_20-24-56 
@@ -819,8 +819,175 @@ https://192.168.0.12:32206
 
 ![](images/user_guide/image-25.png)
 
-#
 
+# 8. MCP工具
+
+**MCP工具** 支持用户对平台的外部服务集成进行 **统一管理**，通过 **MCP工具**，用户可实现与第三方服务的高效对接和自动化管理，提升平台的可扩展性和智能化水平。
+
+MCP工具支持以下功能：
+
+* **服务详情**：可查看每个MCP工具的详细信息，包括功能介绍、使用方法、参数配置及可用工具列表，帮助用户全面了解和高效使用各类工具。
+
+* **服务开通**：支持对平台预置的MCP工具进行开通，配置API Key后即可使用相关服务。
+
+* **服务创建**：用户可根据实际需求自定义创建MCP服务，灵活扩展平台能力。
+
+* **服务部署**：支持对自定义MCP工具进行部署。
+
+* **服务编辑**：支持对自定义MCP工具进行信息编辑，便于管理和维护。
+
+* **服务删除**：支持对自定义MCP工具进行删除操作，彻底移除不再需要的服务。
+
+---
+
+## 8.1 服务详情
+
+**Step 1：进入详情**
+
+在 **“MCP工具”** 页面，点击任一卡片，进入 **服务详情** 页。
+
+![](images/user_guide/image-mcp-1.png)
+
+**Step 2：查看信息**
+
+在详情页可切换 **“概述”** 和 **“工具”** ，查看功能介绍、使用方法、参数配置及可用工具列表。
+
+![](images/user_guide/image-mcp-2.png)
+
+> 预置MCP工具概述信息
+
+![](images/user_guide/image-mcp-3.png)
+
+> 自定义MCP工具概述信息
+
+![](images/user_guide/image-mcp-4.png)
+
+> MCP工具可用工具列表信息
+
+## 8.2 服务开通
+
+**Step 1：选择工具**
+
+在 **“MCP工具”** 页面，选择需要开通的 **预置MCP工具**，点击 **“开通”**。
+
+**Step 2：获取API Key**
+
+按页面提示，前往服务官网获取 **API Key**。
+
+**Step 3：填写API Key**
+
+在弹窗中输入 **API Key**，点击 **“开通”**。
+
+![](images/user_guide/image-mcp-5.png)
+
+> **提示**：**开通** MCP服务后，相关功能和工具才能正常使用。若需更换 **API Key**，可以 **停止服务** 后重新填写。
+
+## 8.3 服务创建
+
+**Step 1：发起创建**
+
+在 “MCP工具” 页面，点击 **“创建MCP工具”**。
+
+**Step 2：填写信息**
+
+填写以下信息：
+
+- **服务名称**：自定义服务的名称，便于识别和管理。
+
+- **描述**：对服务的简要说明，便于后续维护和区分。
+
+- **安装方式**：选择服务的安装方式（npx、uvx、SSE）。
+
+- **服务配置**：用于定义服务的运行方式和所需依赖。
+
+![](images/user_guide/image-mcp-6.png)
+
+Step 3：点击 **“部署”** 后，平台 **自动部署** MCP服务，部署成功后可在列表中查看和管理。
+
+## 8.4 服务编辑
+
+**Step 1：进入编辑**
+
+在 **自定义MCP工具** 的卡片中，点击 **“编辑”**。
+
+![](images/user_guide/image-mcp-7.png)
+
+**Step 2：编辑信息**
+
+- 若服务处于 **未部署** 状态，可编辑 **所有信息**（**服务名称**、**描述**、**安装方式**、**服务配置**），点击 **“保存”** 后，自动部署服务。
+
+![](images/user_guide/image-mcp-8.png)
+
+- 若服务处于 **部署中** 或 **已部署** 状态，仅允许编辑 **服务名称** 和 **描述**，点击 **“保存”** 后，信息生效。
+
+![](images/user_guide/image-mcp-9.png)
+
+> **提示**：若需编辑 **安装方式** 或 **服务配置** 参数，请先 **停止服务** 再进行编辑。
+
+## 8.5 服务部署
+
+**Step 1：发起部署**
+
+在 **未部署** 状态的自定义MCP工具的卡片中，点击 **“部署”**。
+
+![](images/user_guide/image-mcp-7.png)
+
+**Step 2：确认部署**
+
+在弹窗中确认 **部署**，未部署的服务将开始部署。
+
+![](images/user_guide/image-mcp-10.png)
+
+**Step 3：查看状态**
+
+部署完成后，状态变为 **“已部署”**，可在 **服务详情** > **“工具”** 页中查看相关服务功能。
+
+**Step 4：停止服务**
+
+如需释放资源，可在已部署或部署中状态下点击 **“停止”** 按钮，工具状态变为 **“未部署”**，如需再次使用可重新部署。
+
+![](images/readme/image-mcp-11.png)
+
+> **提示**：只有 **部署成功** 后，工具才能正常提供服务。**停止服务** 后，相关服务功能将不可用，释放占用的系统资源。
+
+## 8.6 服务删除
+
+**Step 1：发起删除**
+
+在 **自定义MCP工具** 的卡片中，点击 **“删除”**。
+
+![](images/user_guide/image-mcp-7.png)
+
+**Step 2：确认删除**
+
+在弹窗中确认 **删除**，已部署的服务将停止并删除，相关配置将被彻底移除。
+
+![](images/user_guide/image-mcp-12.png)
+
+> **提示**：**删除操作将无法撤销，请谨慎操作。**
+
+
+# 9. Agent管理
+
+## 9.1 Agent创建
+登录平台后，点击左侧菜单栏**Agent管理**，点击右上方的**部署Agent**按钮。填写表单，如下图所示：
+![](images/user_guide/image-agent-1.png)
+其中：
+**名称**：Agent的名字，可以根据需要取值，支持中英文等字符
+**选择模型**：选择当前平台已经部署的模型服务。如果没有已部署的模型，则需要在模型服务部署一个模型，请选择支持工具调用的模型，如千问3系列及Deepseek满血模型
+**选择工具**：选择在MCP工具中已经部署的工具，可以支持选择多个工具，以让Agent提供多种功能
+**System Prompt**：选填，您可以填写一些指导性Prompt给大模型
+**描述**：Agent的描述信息，支持中英文等字符
+点击**部署**，则当前Agent会立刻在本平台部署。
+
+## 9.2 Agent使用
+Agent部署后，在**Agent管理**页面能看到当前平台已经部署的所有Agent服务。如下图所示：
+![](images/user_guide/image-agent-2.png)
+
+以agent-demo举例，页面显示了使用Agent的Model ID、服务地址，您可以通过这个信息以及从用户管理获取到的API-KEY，配置到到LLM对话客户端，进行使用。以ChatBox为例，配置如下：
+![](images/user_guide/image-agent-3.png)
+配置完成后，可进行对话，询问MCP工具支持的相关问题。
+![](images/user_guide/image-agent-4.png)
 
 
 #
